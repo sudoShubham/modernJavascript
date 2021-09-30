@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">Firebase Project</h2>
+
+    <div class="container my-5">
+      <h2>My reminders</h2>
+      <ul></ul>
+      <form>
+        <label for="recipe">Add a reminder:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="recipe" required />
+          <div class="input-group-append">
+            <input
+              type="submit"
+              value="add"
+              class="btn btn-outline-secondary"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC-LZVo3sucmoKxHMtrV6b1fxClrDvE6VI",
+        authDomain: "modernjs-9eeca.firebaseapp.com",
+        projectId: "modernjs-9eeca",
+        storageBucket: "modernjs-9eeca.appspot.com",
+        messagingSenderId: "770046987800",
+        appId: "1:770046987800:web:481cedbe1932caa323fd6d",
+        measurementId: "G-Q5169GGJFP",
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+    </script>
+
+    <script src="./sandbox.js"></script>
+  </body>
+</html>
